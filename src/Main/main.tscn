@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqfscomxb8s33"]
+
+[ext_resource type="PackedScene" uid="uid://d4d713c1pny7d" path="res://src/Characters/robot.tscn" id="1_72wn6"]
+[ext_resource type="PackedScene" uid="uid://f64ww3rd4xrw" path="res://src/Characters/floor.tscn" id="2_krud4"]
+
+[node name="main" type="Node2D"]
+
+[node name="Robot" parent="." instance=ExtResource("1_72wn6")]
+position = Vector2(50.7561, 40.8095)
+
+[node name="camera_2d" type="Camera2D" parent="Robot"]
+
+[node name="floor" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(17, 88)
+
+[node name="floor2" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(33, 94)
+
+[node name="floor3" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(49, 100)
+
+[node name="floor4" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(0, 82)
+
+[node name="floor5" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(87, 100)
+
+[node name="floor6" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(125, 100)
+
+[node name="floor8" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(201, 100)
+
+[node name="floor7" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(163, 100)
+
+[node name="floor10" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(277, 100)
+
+[node name="floor9" parent="." instance=ExtResource("2_krud4")]
+position = Vector2(239, 100)

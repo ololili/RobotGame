@@ -1,0 +1,252 @@
+[gd_scene load_steps=18 format=3 uid="uid://d4d713c1pny7d"]
+
+[ext_resource type="Script" path="res://src/Characters/robot.gd" id="1_b70ax"]
+[ext_resource type="Texture2D" uid="uid://ncmfg4yku03g" path="res://Assets/Characters/BigRobotFriend.png" id="1_vayys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vi30g"]
+size = Vector2(8, 12)
+
+[sub_resource type="Animation" id="Animation_x7nne"]
+resource_name = "AirborneLeft"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_aw74r"]
+resource_name = "AirborneRight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_1psgw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5x76f"]
+resource_name = "ShootingDownLeft"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 8), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_aagho"]
+resource_name = "ShootingDownRight"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 9), Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_shtla"]
+resource_name = "ShootingLeft"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_d87vo"]
+resource_name = "ShootingRight"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_c2kwm"]
+resource_name = "ShootingUpLeft"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 10), Vector2i(1, 10), Vector2i(2, 10), Vector2i(3, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_qrm4e"]
+resource_name = "ShootingUpRight"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 11), Vector2i(1, 11), Vector2i(2, 11), Vector2i(3, 11)]
+}
+
+[sub_resource type="Animation" id="Animation_3pkgm"]
+resource_name = "StandingLeft"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vuswi"]
+resource_name = "StandingRight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b4ndm"]
+resource_name = "WalkingLeft"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_bc3le"]
+resource_name = "WalkingRight"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 3), Vector2i(1, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eq1nb"]
+_data = {
+"AirborneLeft": SubResource("Animation_x7nne"),
+"AirborneRight": SubResource("Animation_aw74r"),
+"RESET": SubResource("Animation_1psgw"),
+"ShootingDownLeft": SubResource("Animation_5x76f"),
+"ShootingDownRight": SubResource("Animation_aagho"),
+"ShootingLeft": SubResource("Animation_shtla"),
+"ShootingRight": SubResource("Animation_d87vo"),
+"ShootingUpLeft": SubResource("Animation_c2kwm"),
+"ShootingUpRight": SubResource("Animation_qrm4e"),
+"StandingLeft": SubResource("Animation_3pkgm"),
+"StandingRight": SubResource("Animation_vuswi"),
+"WalkingLeft": SubResource("Animation_b4ndm"),
+"WalkingRight": SubResource("Animation_bc3le")
+}
+
+[node name="robot" type="CharacterBody2D"]
+script = ExtResource("1_b70ax")
+speed = 100.0
+jump_velocity = -100.0
+kick_back = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vayys")
+hframes = 4
+vframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vi30g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eq1nb")
+}
