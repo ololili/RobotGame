@@ -60,6 +60,17 @@ shoot={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="character"
+2d_physics/layer_3="destructible"
+2d_physics/layer_4="projectile"
+
+[physics]
+
+2d/default_gravity=100.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
