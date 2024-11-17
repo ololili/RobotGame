@@ -11,21 +11,17 @@ var is_down: bool = false
 func _ready():
 	sprite = $sprite_2d
 	if is_main_button:
+		Globals.max_timer = max_timer
 		Globals.timer = max_timer
 
 
-func _process(delta):
-	if is_main_button:
-		handle_timing(delta)
+func _process(_delta):
+	if is_main_button and is_down and not Globals.is_timing:
+		reset_button()
 
-func handle_timing(delta):
-	if Globals.is_timing:
-		Globals.timer -= delta
-		if Globals.timer < 0:
-			Globals.is_timing = false
-			Globals.timer = max_timer
-			is_down = false
-			sprite.frame = 0
+func reset_button():
+	is_down = false
+	sprite.frame = 0
 
 
 func _on_body_entered(body):
@@ -34,5 +30,4 @@ func _on_body_entered(body):
 		is_down = true
 		sprite.frame = 1
 		if is_main_button:
-			Globals.is_timing = true
-			Globals.timer = max_timer
+			Globals.start_timer()
