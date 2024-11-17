@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
-
+@export_group("movement")
 @export var speed: float = 300.0
 @export var jump_velocity: float = -400.0
 @export var kick_back: float = 300.0
 @export var drag: float = 3.0
+@export_group("shooting")
 @export var energy_cost: float = 10.0
 @export var projectile_speed: float = 300
+@export var recharge_rate: float = 10.0
 
 var projectile
 var animation_player: AnimationPlayer
@@ -19,6 +21,7 @@ var up_down: String = "Up"
 
 
 func _ready():
+	Globals.recharge_rate = recharge_rate
 	projectile = load("res://src/Characters/projectile.tscn") as PackedScene
 	animation_player = $AnimationPlayer
 
@@ -52,9 +55,13 @@ func handle_floor_movement(direction):
 	
 func handle_air_movement(delta, direction):
 	animation_player.play("Airborne" + left_right)
+	
 	velocity += get_gravity() * delta
-	var delta_v = direction.x * speed - velocity.x
-	velocity.x += delta_v * drag * delta
+	
+	var delta_v = Vector2(0, 0)
+	delta_v.x = direction.x * speed - velocity.x
+	delta_v.y = max(direction.y, 0) * speed - velocity.y
+	velocity += delta_v * drag * delta
 
 func handle_shooting(direction):
 	Globals.energy -= energy_cost
