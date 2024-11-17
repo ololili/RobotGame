@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var jump_velocity: float = -400.0
 @export var kick_back: float = 300.0
 @export var drag: float = 3.0
+@export var energy_cost: float = 10.0
 
 var animation_player: AnimationPlayer
 
@@ -28,7 +29,7 @@ func _physics_process(delta):
 			handle_floor_movement(direction)
 		else:
 			handle_air_movement(delta, direction)
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and Globals.energy >= energy_cost:
 		handle_shooting()
 
 	move_and_slide()
@@ -53,6 +54,7 @@ func handle_air_movement(delta, direction):
 	velocity.x += delta_v * drag * delta
 
 func handle_shooting():
+	Globals.energy -= energy_cost
 	is_shooting = true
 	if last_direction.y == 0:
 		animation_player.play("Shooting" + left_right)

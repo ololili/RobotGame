@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://blfrkbwrknghv"]
+[gd_scene load_steps=5 format=3 uid="uid://blfrkbwrknghv"]
 
 [ext_resource type="Texture2D" uid="uid://dbxkggdee1egu" path="res://Assets/ChangingElements/EnergyBarBackground.png" id="1_r1vt7"]
 [ext_resource type="Texture2D" uid="uid://ddurkxocdqhfu" path="res://Assets/ChangingElements/EnergyBarForeeground.png" id="2_wthnd"]
 [ext_resource type="Texture2D" uid="uid://cxhrvo1w8p02v" path="res://Assets/ChangingElements/EnergyBarFill.png" id="3_omqrr"]
+[ext_resource type="Script" path="res://src/ChangingElements/energy_bar.gd" id="4_332f1"]
 
 [node name="energy_bar" type="TextureProgressBar"]
 offset_right = 64.0
@@ -12,3 +13,4 @@ stretch_margin_left = 2
 texture_under = ExtResource("1_r1vt7")
 texture_over = ExtResource("2_wthnd")
 texture_progress = ExtResource("3_omqrr")
+script = ExtResource("4_332f1")
