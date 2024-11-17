@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj6r2imiwgiys"]
+[gd_scene load_steps=6 format=3 uid="uid://bj6r2imiwgiys"]
 
 [ext_resource type="Script" path="res://src/ChangingElements/Scripts/button.gd" id="1_b8fj0"]
 [ext_resource type="Texture2D" uid="uid://cu60kkiqvvi2p" path="res://Assets/ChangingElements/Button.png" id="1_u00o6"]
+[ext_resource type="AudioStream" uid="uid://csrt1nodqt67x" path="res://Assets/Sounds/Sfx/random.wav" id="3_jjija"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvbsu"]
 size = Vector2(4, 4)
@@ -12,6 +13,9 @@ size = Vector2(8, 2)
 [node name="button" type="Area2D"]
 collision_mask = 3
 script = ExtResource("1_b8fj0")
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jjija")
 
 [node name="sprite_2d" type="Sprite2D" parent="."]
 texture = ExtResource("1_u00o6")

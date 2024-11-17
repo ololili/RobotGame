@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b40ojgxnq3w3u"]
+[gd_scene load_steps=9 format=3 uid="uid://b40ojgxnq3w3u"]
 
 [ext_resource type="Texture2D" uid="uid://dbwx5dnr62lm8" path="res://Assets/ChangingElements/RechargeStation.png" id="1_a8771"]
 [ext_resource type="Script" path="res://src/ChangingElements/Scripts/recharge_station.gd" id="1_plpud"]
+[ext_resource type="AudioStream" uid="uid://cyel2quv8iw2p" path="res://Assets/Sounds/Sfx/synth.wav" id="3_dgfjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y51cp"]
 size = Vector2(14, 8)
@@ -78,6 +79,9 @@ shape = SubResource("RectangleShape2D_y51cp")
 libraries = {
 "": SubResource("AnimationLibrary_4tsl1")
 }
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dgfjv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

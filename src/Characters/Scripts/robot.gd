@@ -64,6 +64,7 @@ func handle_air_movement(delta, direction):
 	velocity += delta_v * drag * delta
 
 func handle_shooting(direction):
+	$audio_stream_player.play()
 	Globals.energy -= energy_cost
 	is_shooting = true
 	if direction.y == 0:

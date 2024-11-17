@@ -1,9 +1,15 @@
 extends Area2D
 
-
+var sound_player: AudioStreamPlayer
+var is_charging: bool = false
 var is_active: bool = false
 
+func _ready():
+	sound_player = $audio_stream_player
+
 func _process(_delta):
+	if is_charging and not sound_player.playing:
+		sound_player.play()
 	if is_active != Globals.is_timing:
 		is_active = Globals.is_timing
 		if is_active:
@@ -13,11 +19,11 @@ func _process(_delta):
 
 func _on_body_entered(body):
 	if body.name == "robot":
-		print("should start charging")
+		is_charging = true
 		Globals.entered_charge_station()
 
 
 func _on_body_exited(body):
 	if body.name == "robot":
-		print("should stop charging")
+		is_charging = false
 		Globals.left_charge_station()

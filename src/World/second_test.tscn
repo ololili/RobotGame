@@ -27,7 +27,7 @@ position = Vector2(341.505, -37.7231)
 [node name="button" parent="." instance=ExtResource("3_l8vau")]
 position = Vector2(8, -8)
 is_main_button = true
-max_timer = 10.0
+max_timer = 120.0
 
 [node name="door" parent="button" instance=ExtResource("4_gmwnr")]
 position = Vector2(-33, 0)

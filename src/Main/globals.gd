@@ -14,11 +14,9 @@ func _process(delta):
 		timer -= delta
 		if timer < 0:
 			stop_timer()
-	elif energy < 100.0:
-		is_charging = true
 	else:
-		is_charging = false
-	if is_charging:
+		is_charging = true
+	if is_charging and energy < 100.0:
 		energy += recharge_rate * delta
 
 func entered_charge_station():

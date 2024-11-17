@@ -26,6 +26,7 @@ func reset_button():
 
 func _on_body_entered(body):
 	if body.name == "robot" and not is_down:
+		$audio_stream_player.play()
 		button_pressed.emit()
 		is_down = true
 		sprite.frame = 1
