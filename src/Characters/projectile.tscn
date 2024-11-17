@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://b811m603pjpmi"]
+
+[ext_resource type="Texture2D" uid="uid://cpvyx2cbucn1i" path="res://Assets/Characters/Projectile.png" id="1_bw62i"]
+
+[sub_resource type="Animation" id="Animation_g23tw"]
+resource_name = "standard"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_2d:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_8gc5p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_2d:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mg3uh"]
+_data = {
+"RESET": SubResource("Animation_8gc5p"),
+"standard": SubResource("Animation_g23tw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjvek"]
+size = Vector2(2, 2)
+
+[node name="projectile" type="Area2D"]
+
+[node name="sprite_2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_bw62i")
+hframes = 8
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mg3uh")
+}
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vjvek")
