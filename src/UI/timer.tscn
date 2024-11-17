@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgiocwgh1srin"]
 
 [ext_resource type="LabelSettings" uid="uid://c4sgu33wpjoen" path="res://Assets/Fonts/standard_font_settings.tres" id="1_qdl8k"]
-[ext_resource type="Script" path="res://src/UI/timer.gd" id="1_w308k"]
+[ext_resource type="Script" path="res://src/UI/Scripts/timer.gd" id="1_w308k"]
 [ext_resource type="Texture2D" uid="uid://diwmrsacig6gc" path="res://Assets/ChangingElements/TimerBackground.png" id="3_djc8q"]
 
 [node name="timer" type="Label"]

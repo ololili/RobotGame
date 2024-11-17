@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b811m603pjpmi"]
 
 [ext_resource type="Texture2D" uid="uid://cpvyx2cbucn1i" path="res://Assets/Characters/Projectile.png" id="1_bw62i"]
-[ext_resource type="Script" path="res://src/Characters/projectile.gd" id="1_sbqj2"]
+[ext_resource type="Script" path="res://src/Characters/Scripts/projectile.gd" id="1_sbqj2"]
 
 [sub_resource type="Animation" id="Animation_8gc5p"]
 length = 0.001

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dbxkggdee1egu" path="res://Assets/ChangingElements/EnergyBarBackground.png" id="1_r1vt7"]
 [ext_resource type="Texture2D" uid="uid://ddurkxocdqhfu" path="res://Assets/ChangingElements/EnergyBarForeeground.png" id="2_wthnd"]
 [ext_resource type="Texture2D" uid="uid://cxhrvo1w8p02v" path="res://Assets/ChangingElements/EnergyBarFill.png" id="3_omqrr"]
-[ext_resource type="Script" path="res://src/UI/energy_bar.gd" id="4_332f1"]
+[ext_resource type="Script" path="res://src/UI/Scripts/energy_bar.gd" id="4_332f1"]
 
 [node name="energy_bar" type="TextureProgressBar"]
 offset_right = 64.0
