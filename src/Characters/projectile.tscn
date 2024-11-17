@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b811m603pjpmi"]
+[gd_scene load_steps=7 format=3 uid="uid://b811m603pjpmi"]
 
 [ext_resource type="Texture2D" uid="uid://cpvyx2cbucn1i" path="res://Assets/Characters/Projectile.png" id="1_bw62i"]
+[ext_resource type="Script" path="res://src/Characters/projectile.gd" id="1_sbqj2"]
 
 [sub_resource type="Animation" id="Animation_g23tw"]
 resource_name = "standard"
@@ -43,7 +44,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vjvek"]
 size = Vector2(2, 2)
 
-[node name="projectile" type="Area2D"]
+[node name="projectile" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_sbqj2")
 
 [node name="sprite_2d" type="Sprite2D" parent="."]
 texture = ExtResource("1_bw62i")

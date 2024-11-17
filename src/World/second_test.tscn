@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://d05kkcumc7guk"]
+[gd_scene load_steps=6 format=4 uid="uid://d05kkcumc7guk"]
 
 [ext_resource type="TileSet" uid="uid://ccwxj8515lbkj" path="res://Assets/Terrain/world_tile_set.tres" id="1_itpjh"]
 [ext_resource type="PackedScene" uid="uid://d4d713c1pny7d" path="res://src/Characters/Robot.tscn" id="2_6jyln"]
 [ext_resource type="PackedScene" uid="uid://bj6r2imiwgiys" path="res://src/ChangingElements/button.tscn" id="3_l8vau"]
 [ext_resource type="PackedScene" uid="uid://b6p87ki5suc6r" path="res://src/ChangingElements/door.tscn" id="4_gmwnr"]
+[ext_resource type="PackedScene" uid="uid://blhe5j152tvjf" path="res://src/ChangingElements/barrier.tscn" id="5_ie0hd"]
 
 [node name="second_test" type="Node2D"]
 
@@ -30,3 +31,6 @@ max_timer = 5.0
 [node name="door" parent="button" instance=ExtResource("4_gmwnr")]
 position = Vector2(-32, 0)
 is_main_door = true
+
+[node name="barrier" parent="." instance=ExtResource("5_ie0hd")]
+position = Vector2(248, -8)
