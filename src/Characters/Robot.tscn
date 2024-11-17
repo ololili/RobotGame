@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/Characters/robot.gd" id="1_b70ax"]
 [ext_resource type="Texture2D" uid="uid://ncmfg4yku03g" path="res://Assets/Characters/BigRobotFriend.png" id="1_vayys"]
-[ext_resource type="PackedScene" uid="uid://b51y32qionmrk" path="res://src/Characters/my_camera.tscn" id="3_p0nia"]
+[ext_resource type="PackedScene" uid="uid://b51y32qionmrk" path="res://src/UI/my_camera.tscn" id="3_p0nia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vi30g"]
 size = Vector2(8, 12)
