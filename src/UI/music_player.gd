@@ -1,5 +1,7 @@
 extends AudioStreamPlayer
 
+@export var my_volume: float = 5
+
 var end_song_timer: float = 3.0
 var timer: float = 0
 
@@ -11,6 +13,7 @@ var setup_music: AudioStream
 
 
 func _ready():
+	volume_db = my_volume
 	race_music = ResourceLoader.load("res://Assets/Sounds/Music/mountain-trials.ogg")
 	setup_music = ResourceLoader.load("res://Assets/Sounds/Music/running.ogg")
 	stream = setup_music
@@ -44,4 +47,4 @@ func fade_to_setup(delta):
 		stream = setup_music
 		play()
 		is_fading_to_setup = false
-		volume_db = 0
+		volume_db = my_volume
