@@ -9,11 +9,14 @@ var score_node: Node2D
 
 func _ready():
 	active_scene = load("res://src/World/Levels/level_0.tscn")
-	# score_scene = load(the thing)
+	score_scene = load("res://src/World/Menus/score_scene.tscn")
 	active_node = active_scene.instantiate()
 	add_child(active_node)
+	Globals.score_ended.connect(next_level)
+	Globals.level_ended.connect(to_score)
 
 func to_score():
+	print("Should go to score")
 	score_node = score_scene.instantiate()
 	active_node.queue_free()
 	add_child(score_node)

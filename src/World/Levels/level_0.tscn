@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://drlgjal6p3eir"]
+[gd_scene load_steps=9 format=4 uid="uid://drlgjal6p3eir"]
 
 [ext_resource type="TileSet" uid="uid://ccwxj8515lbkj" path="res://Assets/Terrain/world_tile_set.tres" id="1_vkna7"]
 [ext_resource type="PackedScene" uid="uid://blhe5j152tvjf" path="res://src/ChangingElements/barrier.tscn" id="2_heyc0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d4d713c1pny7d" path="res://src/Characters/Robot.tscn" id="5_3fjpn"]
 [ext_resource type="PackedScene" uid="uid://b40ojgxnq3w3u" path="res://src/ChangingElements/recharge_station.tscn" id="5_wn63e"]
 [ext_resource type="LabelSettings" uid="uid://c4sgu33wpjoen" path="res://Assets/Fonts/standard_font_settings.tres" id="6_xceua"]
+[ext_resource type="PackedScene" uid="uid://c863rvd6d6fec" path="res://src/ChangingElements/level_ender.tscn" id="8_b1o5w"]
 
 [node name="level_0" type="Node2D"]
 
@@ -91,6 +92,9 @@ label_settings = ExtResource("6_xceua")
 autowrap_mode = 2
 
 [node name="robot" parent="." instance=ExtResource("5_3fjpn")]
-position = Vector2(224, -696)
+position = Vector2(-671.454, 296.761)
+
+[node name="level_ender" parent="." instance=ExtResource("8_b1o5w")]
+position = Vector2(392, 368)
 
 [connection signal="button_pressed" from="changables/button" to="changables/door" method="_on_button_button_pressed"]

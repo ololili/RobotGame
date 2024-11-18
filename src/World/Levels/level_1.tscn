@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=4 uid="uid://b1m7ff3yd5dwf"]
+
+[ext_resource type="TileSet" uid="uid://ccwxj8515lbkj" path="res://Assets/Terrain/world_tile_set.tres" id="1_uj4k1"]
+[ext_resource type="PackedScene" uid="uid://bj6r2imiwgiys" path="res://src/ChangingElements/button.tscn" id="2_00rpp"]
+[ext_resource type="PackedScene" uid="uid://b6p87ki5suc6r" path="res://src/ChangingElements/door.tscn" id="3_w4mgc"]
+[ext_resource type="PackedScene" uid="uid://c863rvd6d6fec" path="res://src/ChangingElements/level_ender.tscn" id="4_ikx2r"]
+[ext_resource type="PackedScene" uid="uid://d4d713c1pny7d" path="res://src/Characters/robot.tscn" id="5_uh7x6"]
+
+[node name="level_1" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="tile_map_layer" type="TileMapLayer" parent="level"]
+tile_map_data = PackedByteArray("AAD+/wQAAAAGAAQAAAD//wQAAAABAAMAAAAAAAQAAAAEAAUAAAABAAQAAAABAAUAAAACAAQAAAABAAMAAAADAAQAAAABAAUAAAAFAAUAAAAAAAUAAAAEAAQAAAABAAMAAAAGAAUAAAABAAMAAAAHAAUAAAABAAMAAAAIAAUAAAAFAAUAAAAIAAQAAAADAAMAAAAJAAQAAAABAAMAAAAKAAQAAAAEAAUAAAALAAQAAAABAAUAAAAMAAQAAAABAAUAAAANAAQAAAAIAAQAAAAFAAQAAAAFAAMAAAAKAAIAAAAHAAMAAAA=")
+tile_set = ExtResource("1_uj4k1")
+
+[node name="button" parent="." instance=ExtResource("2_00rpp")]
+position = Vector2(8, 56)
+is_main_button = true
+
+[node name="door" parent="." instance=ExtResource("3_w4mgc")]
+position = Vector2(167, 56)
+is_main_door = true
+
+[node name="level_ender" parent="." instance=ExtResource("4_ikx2r")]
+position = Vector2(188, -9)
+
+[node name="robot" parent="." instance=ExtResource("5_uh7x6")]
+position = Vector2(97.1066, -22.1566)

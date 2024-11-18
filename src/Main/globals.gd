@@ -2,6 +2,8 @@ extends Node
 
 signal timer_started
 signal timer_ended
+signal score_ended
+signal level_ended
 
 var energy: float = 100.0
 var recharge_rate: float
@@ -39,3 +41,10 @@ func stop_timer():
 	timer_ended.emit()
 	timer = max_timer
 	is_timing = false
+
+func end_level():
+	is_timing = false
+	level_ended.emit()
+
+func end_score():
+	score_ended.emit()
