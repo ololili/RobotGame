@@ -9,13 +9,11 @@ var collision: CollisionShape2D
 func _ready():
 	collision = $collision_shape_2d
 	sprite = $sprite_2d
-
-func _process(_delta):
-	
-	if is_main_door and Globals.is_timing:
-		open_door()
-	if is_main_door and not Globals.is_timing:
-		close_door()
+	if is_main_door:
+		Globals.timer_started.connect(open_door)
+		Globals.timer_ended.connect(close_door)
+	else:
+		Globals.timer_started.connect(close_door)
 
 func close_door():
 	if is_open:

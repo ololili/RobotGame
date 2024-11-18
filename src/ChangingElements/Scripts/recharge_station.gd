@@ -18,12 +18,12 @@ func _process(_delta):
 			$animation_player.play("inactive")
 
 func _on_body_entered(body):
-	if body.name == "robot":
+	if body.name == "robot" and is_active:
 		is_charging = true
 		Globals.entered_charge_station()
 
 
 func _on_body_exited(body):
-	if body.name == "robot":
+	if body.name == "robot" and is_active:
 		is_charging = false
 		Globals.left_charge_station()

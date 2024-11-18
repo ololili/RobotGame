@@ -80,7 +80,7 @@ func handle_shooting(direction):
 func instantiate_projectile(direction):
 	var new_projectile = projectile.instantiate()
 	get_parent().add_child(new_projectile)
-	var pos = global_position + direction * 8
+	var pos = global_position + direction * 4
 	new_projectile.global_position = pos
 	new_projectile.start(direction, projectile_speed)
 

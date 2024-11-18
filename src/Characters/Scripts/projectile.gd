@@ -23,6 +23,5 @@ func _physics_process(delta):
 	if collision:
 		var collider = collision.get_collider() as Node
 		if collider.has_method("break_door"):
-			print("It should break")
 			collider.break_door()
 		queue_free()
