@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://blhe5j152tvjf"]
+
+[ext_resource type="Texture2D" uid="uid://oke1vmwovnuv" path="res://Assets/ChangingElements/BarrierVertical.png" id="1_7goln"]
+[ext_resource type="Script" path="res://src/ChangingElements/Scripts/barrier.gd" id="1_jvpwp"]
+[ext_resource type="AudioStream" uid="uid://c4vstwprd8kil" path="res://Assets/Sounds/Sfx/explosion.wav" id="3_4juqr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wunu"]
+size = Vector2(2, 16)
+
+[node name="barrier" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_jvpwp")
+
+[node name="sprite_2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_7goln")
+hframes = 2
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3wunu")
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4juqr")
