@@ -40,7 +40,7 @@ func start_timer():
 
 func stop_timer():
 	timer_ended.emit()
-	timer = max_timer
+	timer = 0
 	is_timing = false
 
 func end_level():

@@ -74,9 +74,9 @@ rotation = 1.5708
 
 [node name="label" type="Label" parent="text"]
 offset_left = 184.0
-offset_top = 344.0
+offset_top = 336.0
 offset_right = 270.0
-offset_bottom = 381.0
+offset_bottom = 373.0
 text = "Use wasd or arrow keys to move"
 label_settings = ExtResource("6_xceua")
 autowrap_mode = 2
@@ -87,6 +87,15 @@ offset_top = 240.0
 offset_right = 16.0
 offset_bottom = 280.0
 text = "use spacebar or enter to shoot"
+label_settings = ExtResource("6_xceua")
+autowrap_mode = 2
+
+[node name="label3" type="Label" parent="text"]
+offset_left = -720.0
+offset_top = 336.0
+offset_right = -568.0
+offset_bottom = 372.0
+text = "Jump on this button and race back to where you started"
 label_settings = ExtResource("6_xceua")
 autowrap_mode = 2
 
