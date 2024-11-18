@@ -1,7 +1,7 @@
 extends Label
 
 
-func _ready():
+func _process(_delta):
 	text = pad_zeros(Globals.total_score)
 
 func pad_zeros(num):

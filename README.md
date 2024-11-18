@@ -5,3 +5,5 @@ Contains music ©2023 Retro Indie Josh (https://retroindiejosh.itch.io) Licensed
 "Early GameBoy" font by Jimmy Campbell (https://www.dafont.com/early-gameboy.font).
 
 sfx from (https://sfxr.me/) a web based adaptation of sfxr by DrPetter (http://www.drpetter.se/project_sfxr.html) Licensed under the MIT free software license.
+
+the color palette is 2bit demichrome by Space Sandwich (https://lospec.com/palette-list/2bit-demichrome)

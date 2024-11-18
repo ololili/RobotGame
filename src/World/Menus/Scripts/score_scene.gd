@@ -22,6 +22,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("right"):
 			Globals.end_score(true)
 			Globals.total_score += score
+			print(str(Globals.total_score))
 			Globals.previous_score = 0
 
 func zero_padder(text: String):
