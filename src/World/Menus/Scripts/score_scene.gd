@@ -1,15 +1,25 @@
 extends Node2D
 
+
+var score
+var score_text
+
 func _ready():
-	$remaining_time.text = zero_padder(str(round(Globals.timer)))
-	$previous_score.text = zero_padder(str(Globals.score))
-	var new_score = round(Globals.timer) + Globals.score
-	$new_score.text = zero_padder(str(new_score))
-	Globals.score = new_score
+	score = round(Globals.timer)
+	score_text = zero_padder(str(score))
+	$remaining_time.text = score_text
+	$previous_score.text = zero_padder(str(Globals.previous_score))
+	$new_score.text = score_text
+	$new_total.text = zero_padder(str(Globals.total_score + score))
 
 func _process(_delta):
-	if Input.is_action_just_pressed("shoot"):
-		Globals.end_score()
+	if Input.is_action_just_pressed("left"):
+		Globals.end_score(false)
+		Globals.previous_score = score
+	if Input.is_action_just_pressed("right"):
+		Globals.end_score(true)
+		Globals.total_score += score
+		Globals.previous_score = 0
 
 func zero_padder(text: String):
 	if text.length() == 1:

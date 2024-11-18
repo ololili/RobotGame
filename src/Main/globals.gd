@@ -2,14 +2,15 @@ extends Node
 
 signal timer_started
 signal timer_ended
-signal score_ended
+signal score_ended(next_level: bool)
 signal level_ended
 
 var energy: float = 100.0
 var recharge_rate: float
 var max_timer: float
 var timer: float
-var score: int = 0
+var total_score: int = 0
+var previous_score: int = 0
 var is_charging: bool
 
 var is_timing: bool = false
@@ -46,5 +47,5 @@ func end_level():
 	is_timing = false
 	level_ended.emit()
 
-func end_score():
-	score_ended.emit()
+func end_score(next_level: bool):
+	score_ended.emit(next_level)

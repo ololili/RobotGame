@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqfscomxb8s33"]
+[gd_scene load_steps=3 format=3 uid="uid://dqfscomxb8s33"]
 
 [ext_resource type="Script" path="res://src/Main/Scripts/main.gd" id="1_xplty"]
-[ext_resource type="PackedScene" uid="uid://drlgjal6p3eir" path="res://src/World/Levels/level_0.tscn" id="2_a4bu3"]
 [ext_resource type="PackedScene" uid="uid://bjpba0i1o3bwl" path="res://src/UI/music_player.tscn" id="2_ublrc"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_xplty")
 
 [node name="music_player" parent="." instance=ExtResource("2_ublrc")]
-
-[node name="level_0" parent="." instance=ExtResource("2_a4bu3")]

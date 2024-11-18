@@ -14,46 +14,66 @@ tile_map_data = PackedByteArray("AAALAAkAAAAJAAIAAAALAAgAAAAJAAIAAAALAAcAAAAJAAI
 tile_set = ExtResource("1_tkgts")
 
 [node name="pipes" type="TileMapLayer" parent="background"]
-tile_map_data = PackedByteArray("AAAAAAQAAAADAAEAAAABAAQAAAABAAAAAAACAAQAAAABAAAAAAADAAQAAAABAAIAAAAEAAQAAAABAAIAAAAFAAQAAAABAAAAAAAGAAQAAAABAAAAAAAHAAQAAAABAAAAAAAIAAQAAAABAAIAAAAJAAQAAAAFAAEAAAAAAAUAAAACAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAIAAAABAAcAAAABAAIAAAACAAcAAAABAAIAAAADAAcAAAABAAAAAAAEAAcAAAABAAIAAAAFAAcAAAABAAIAAAAGAAcAAAABAAAAAAAHAAcAAAABAAIAAAAIAAcAAAABAAIAAAAJAAcAAAACAAIAAAAJAAYAAAAAAAEAAAAJAAUAAAACAAEAAAAJAAMAAAAAAAEAAAAJAAIAAAAAAAEAAAAJAAEAAAAAAAEAAAAJAAAAAAACAAAAAAAIAAAAAAABAAAAAAAHAAAAAAABAAAAAAAGAAAAAAABAAAAAAAFAAAAAAABAAIAAAAEAAAAAAABAAIAAAADAAAAAAABAAAAAAACAAAAAAABAAIAAAABAAAAAAABAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAEAAAAAAAIAAAACAAEAAAAAAAMAAAAAAAEAAAA=")
+visible = false
+tile_map_data = PackedByteArray("AAAAAAQAAAAAAAEAAAAJAAQAAAAAAAEAAAAAAAUAAAACAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAJAAcAAAACAAEAAAAJAAYAAAACAAEAAAAJAAUAAAACAAEAAAAJAAMAAAAAAAEAAAAJAAIAAAAAAAEAAAAJAAEAAAAAAAEAAAAJAAAAAAACAAAAAAAIAAAAAAABAAAAAAAHAAAAAAABAAAAAAAGAAAAAAABAAAAAAAFAAAAAAABAAIAAAAEAAAAAAABAAIAAAADAAAAAAABAAAAAAACAAAAAAABAAIAAAABAAAAAAABAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAEAAAAAAAIAAAACAAEAAAAAAAMAAAAAAAEAAAAAAAgAAAACAAEAAAAJAAgAAAAAAAEAAAAJAAkAAAAHAAIAAAAAAAkAAAAHAAIAAAA=")
 tile_set = ExtResource("1_tkgts")
 
 [node name="text" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 88.0
-offset_bottom = 117.0
+offset_left = 18.0
+offset_top = 6.0
+offset_right = 106.0
+offset_bottom = 107.0
 text = "Remaining
-Time:
+Time:......
 previous
-Score:
-
+Score:.....
 new
-Score:"
+Score:.....
+new
+total:....."
 label_settings = ExtResource("2_sn1rm")
 
 [node name="remaining_time" type="Label" parent="."]
 offset_left = 104.0
-offset_top = 16.0
+offset_top = 6.0
 offset_right = 144.0
-offset_bottom = 39.0
+offset_bottom = 29.0
 text = "
 000"
 label_settings = ExtResource("2_sn1rm")
 
 [node name="previous_score" type="Label" parent="."]
 offset_left = 104.0
-offset_top = 40.0
+offset_top = 32.0
 offset_right = 144.0
-offset_bottom = 63.0
+offset_bottom = 55.0
 text = "
 000"
 label_settings = ExtResource("2_sn1rm")
 
 [node name="new_score" type="Label" parent="."]
 offset_left = 104.0
-offset_top = 80.0
+offset_top = 58.0
 offset_right = 144.0
-offset_bottom = 103.0
+offset_bottom = 81.0
+text = "
+000"
+label_settings = ExtResource("2_sn1rm")
+
+[node name="label" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 112.0
+offset_right = 146.0
+offset_bottom = 135.0
+text = "left: retry level
+right: next level"
+label_settings = ExtResource("2_sn1rm")
+
+[node name="new_total" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 84.0
+offset_right = 144.0
+offset_bottom = 107.0
 text = "
 000"
 label_settings = ExtResource("2_sn1rm")

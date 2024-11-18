@@ -12,17 +12,17 @@ func _ready():
 	score_scene = load("res://src/World/Menus/score_scene.tscn")
 	active_node = active_scene.instantiate()
 	add_child(active_node)
-	Globals.score_ended.connect(next_level)
+	Globals.score_ended.connect(continue_to_level)
 	Globals.level_ended.connect(to_score)
 
 func to_score():
-	print("Should go to score")
 	score_node = score_scene.instantiate()
 	active_node.queue_free()
 	add_child(score_node)
 
-func next_level():
-	level_num += 1
+func continue_to_level(next_level: bool):
+	if next_level:
+		level_num += 1
 	active_scene = load("res://src/World/Levels/level_" + str(level_num) + ".tscn")
 	active_node = active_scene.instantiate()
 	score_node.queue_free()
