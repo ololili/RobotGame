@@ -32,4 +32,4 @@ func open_door():
 
 
 func _on_button_button_pressed():
-	open_door()
+	open_door.call_deferred()

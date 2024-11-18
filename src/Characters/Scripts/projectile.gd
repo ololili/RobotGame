@@ -22,6 +22,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta) as KinematicCollision2D
 	if collision:
 		var collider = collision.get_collider() as Node
-		if collider.name == "barrier":
+		if collider.has_method("break_door"):
+			print("It should break")
 			collider.break_door()
 		queue_free()
