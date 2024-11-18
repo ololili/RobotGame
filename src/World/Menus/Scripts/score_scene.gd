@@ -3,6 +3,7 @@ extends Node2D
 
 var score
 var score_text
+var timer = 0
 
 func _ready():
 	score = round(Globals.timer)
@@ -12,14 +13,16 @@ func _ready():
 	$new_score.text = score_text
 	$new_total.text = zero_padder(str(Globals.total_score + score))
 
-func _process(_delta):
-	if Input.is_action_just_pressed("left"):
-		Globals.end_score(false)
-		Globals.previous_score = score
-	if Input.is_action_just_pressed("right"):
-		Globals.end_score(true)
-		Globals.total_score += score
-		Globals.previous_score = 0
+func _process(delta):
+	timer += delta
+	if timer > 1:
+		if Input.is_action_just_pressed("left"):
+			Globals.end_score(false)
+			Globals.previous_score = score
+		if Input.is_action_just_pressed("right"):
+			Globals.end_score(true)
+			Globals.total_score += score
+			Globals.previous_score = 0
 
 func zero_padder(text: String):
 	if text.length() == 1:

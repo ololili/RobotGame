@@ -34,7 +34,6 @@ is_main_door = true
 [node name="main_button" parent="changables" instance=ExtResource("4_otwm8")]
 position = Vector2(-648, 312)
 is_main_button = true
-max_timer = 30.0
 
 [node name="door" parent="changables" instance=ExtResource("3_n0svv")]
 position = Vector2(7, 312)
@@ -92,7 +91,7 @@ label_settings = ExtResource("6_xceua")
 autowrap_mode = 2
 
 [node name="robot" parent="." instance=ExtResource("5_3fjpn")]
-position = Vector2(-671.454, 296.761)
+position = Vector2(224, -752)
 
 [node name="level_ender" parent="." instance=ExtResource("8_b1o5w")]
 position = Vector2(392, 368)

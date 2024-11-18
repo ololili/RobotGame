@@ -243,6 +243,7 @@ jump_velocity = -100.0
 kick_back = 100.0
 drag = 1.5
 projectile_speed = 100.0
+recharge_rate = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vayys")
